@@ -1,3 +1,5 @@
+
+/* organize the styles */
 * {
     color: black
 }
@@ -24,15 +26,6 @@ textarea::placeholder {
 .rm-bg {
     background:none;
 }
-.col-sm-2 {
+.center {
     text-align: center;
 }
-.col-lg-4 {
-    text-align: center;
-}
-  /* class="img-fluid" */
-  /* <img src="https://t3.ftcdn.net/jpg/03/66/10/14/360_F_366101427_8yazUJK82fDrLi4YtpnQO3DJ4dTygxoe.jpg" alt="parchment" */
-  /* <label for="wahExplain">Explain why you want to join the cult.</label>
-  <br>
-  <textarea id="wahExplain" name="wahExplain" cols="100">
-  </textarea> */

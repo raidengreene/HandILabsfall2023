@@ -1,3 +1,4 @@
+// need to convert to jquery
 var select = document.getElementById("phrase");
 var options = ["We are here!", "We are happy!", "We are hyped!", "We are healthy!", "We are hungry!", "We are human!", "We are holy!", "We are halu!", "We are humorous!", "We are happening!"];
 

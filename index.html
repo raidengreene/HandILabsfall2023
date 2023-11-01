@@ -8,28 +8,18 @@
 
 </head>
 <body>
-<!-- code -->
-<!-- 
-1.1 text:name
-3 textarea: why you want to join cult
-1.2 email:email 
-1.2 psw:psw 
-2.1 dropdown:select WAH phrase
-2.1 dropdown: sencond wanted wah phrase group
-2.2 radio: fulltime or parttime of cult
-2.2 checkbox: day of week
-json: show example of good cult member
-submit to get cookie -->
 <header>
   <div class="row container-fluid justify-content-md-center">
-    <div class="col-lg-4">
+    <div class="col-lg-4 center">
       <h1>CULT OF WAH!</h1>
     </div>
   </div>
 </header>
 <br>
 <form>
+<!-- text input things -->
 <div class="row container-fluid justify-content-md-center">
+  <!-- the username stuff -->
   <div class="col-4 bg-img">
     <label for="fname">First name:</label><br>
   <input class="rm-bg" type="text" id="fname" name="fname"><br>
@@ -39,17 +29,21 @@ submit to get cookie -->
   </div>
 
   <div class="col-2"></div>
-
+  
+  <!-- email and password inputs -->
   <div class="col-4 bg-img">
     <label for="userEmail">Enter email:</label><br>
     <input class="rm-bg" type="email" id="userEmail" name="userEmail"><br>
     <label for="userPsw">Enter password:</label><br>
     <input class="rm-bg" type="password" id="userPsw" name="userPsw"><br>
   </div>
+
 </div>
 <br>
 
+<!-- dropdown/radio/checkbox | also has the input into other stuff (not in yet) -->
 <div class="row container-fluid justify-content-md-center">
+  <!-- choosing phrase -->
   <div class="col-4 bg-img">
   <label for="phrase">Choose a main phrase group:</label><br>
   <select class="rm-bg" id="phrase" name="phrase"><br>
@@ -58,8 +52,10 @@ submit to get cookie -->
 <br>
 
   </div>
+
   <div class="col-2"></div>
 
+  <!-- part time or full -->
   <div class="col-4 bg-img">
     <input type="radio" id="fullTime" name="time" value="fullTime">
     <label for="fullTime">Full time</label><br>
@@ -85,6 +81,7 @@ submit to get cookie -->
 </div>
 <br>
 
+<!-- textarea -->
 <div class="row container-fluid justify-content-md-center">
   <div class="col-8 bg-img">
     <label for="wahExplain">Explain why you want to join the cult.</label>
@@ -94,23 +91,29 @@ submit to get cookie -->
 </div>
 <br>
 
+<!-- the sumbmit/load json buttons -->
 <div class="row container-fluid justify-content-md-center">
-  <div class="col">
-    <!-- submitbtn / jsonbtn -->
+  <div class="col center">
+    <input type="submit" value="Submit">
+    <input type="button" onclick="nothing-right-now" value="see example form">
   </div>
 </div>
 <br>
 
 </form>
+<!-- repo/validator/playlist links -->
 <footer>
   <div class="row container-fluid justify-content-md-center">
-    <div class="col-sm-2">
+    <!-- repo -->
+    <div class="col-sm-2 center">
       <p>code</p>
     </div>
-    <div class="col-sm-2">
+    <!-- validator -->
+    <div class="col-sm-2 center">
       <p>validator</p>
     </div>
-    <div class="col-sm-2">
+    <!-- playlist -->
+    <div class="col-sm-2 center">
       <p>playlist</p>
     </div>
   </div>
