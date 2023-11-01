@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cult of WAH!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+<!-- code -->
+<!-- 
+1.1 text:name
+3 textarea: why you want to join cult
+1.2 email:email 
+1.2 psw:psw 
+2.1 dropdown:select WAH phrase
+2.1 dropdown: sencond wanted wah phrase group
+2.2 radio: fulltime or parttime of cult
+2.2 checkbox: day of week
+json: show example of good cult member
+submit to get cookie -->
+<header>
+  <div class="row container-fluid justify-content-md-center">
+    <div class="col-lg-4">
+      <h1>CULT OF WAH!</h1>
+    </div>
+  </div>
+</header>
+<br>
+<form>
+<div class="row container-fluid justify-content-md-center">
+  <div class="col-4 bg-img">
+    <label for="fname">First name:</label><br>
+  <input class="rm-bg" type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input class="rm-bg" type="text" id="lname" name="lname"><br>
+  <br>
+  </div>
+
+  <div class="col-2"></div>
+
+  <div class="col-4 bg-img">
+    <label for="userEmail">Enter email:</label><br>
+    <input class="rm-bg" type="email" id="userEmail" name="userEmail"><br>
+    <label for="userPsw">Enter password:</label><br>
+    <input class="rm-bg" type="password" id="userPsw" name="userPsw"><br>
+  </div>
+</div>
+<br>
+
+<div class="row container-fluid justify-content-md-center">
+  <div class="col-4 bg-img">
+  <label for="phrase">Choose a main phrase group:</label><br>
+  <select class="rm-bg" id="phrase" name="phrase"><br>
+    <option>Choose</option>
+</select><br>
+<br>
+
+  </div>
+  <div class="col-2"></div>
+
+  <div class="col-4 bg-img">
+    <input type="radio" id="fullTime" name="time" value="fullTime">
+    <label for="fullTime">Full time</label><br>
+    <input type="radio" id="partTime" name="time" value="partTime">
+    <label for="partTime">Part time</label><br>
+    <br>
+    <label for="day">Choose cult activity days.</label><br>
+    <input type="checkbox" id="sunday" name="sunday" value="sunday" group="day">
+    <label for="sunday"> Sunday</label><br>
+    <input type="checkbox" id="monday" name="monday" value="monday" group="day">
+    <label for="monday"> Monday</label><br>
+    <input type="checkbox" id="tuesday" name="tuesday" value="tuesday" group="day">
+    <label for="tuesday"> Tuesday</label><br>
+    <input type="checkbox" id="wednesday" name="wednesday" value="wednesday" group="day">
+    <label for="wednesday"> Wednesday</label><br>
+    <input type="checkbox" id="thursday" name="thursday" value="thursday" group="day">
+    <label for="thursday"> Thursday</label><br>
+    <input type="checkbox" id="friday" name="friday" value="friday" group="day">
+    <label for="friday"> Friday</label><br>
+    <input type="checkbox" id="saturday" name="saturday" value="saturday" group="day">
+    <label for="saturday"> Saturday</label><br>
+  </div>
+</div>
+<br>
+
+<div class="row container-fluid justify-content-md-center">
+  <div class="col-8 bg-img">
+    <label for="wahExplain">Explain why you want to join the cult.</label>
+  <br>
+  <textarea id="wahExplain" name="wahExplain" cols="75" placeholder="click here to put explaination."></textarea>
+  </div>
+</div>
+<br>
+
+<div class="row container-fluid justify-content-md-center">
+  <div class="col">
+    <!-- submitbtn / jsonbtn -->
+  </div>
+</div>
+<br>
+
+</form>
+<footer>
+  <div class="row container-fluid justify-content-md-center">
+    <div class="col-sm-2">
+      <p>code</p>
+    </div>
+    <div class="col-sm-2">
+      <p>validator</p>
+    </div>
+    <div class="col-sm-2">
+      <p>playlist</p>
+    </div>
+  </div>
+</footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script><script  src="scripts/script.js"></script>
+
+</body>
+</html>
