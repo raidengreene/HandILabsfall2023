@@ -13,6 +13,7 @@ var first_select = document.getElementById("first_dropdown");
 var second_select = document.getElementById("second_dropdown");
 var options = ["Choose", "We are here!", "We are happy!", "We are hyped!", "We are healthy!", "We are hungry!", "We are human!", "We are holy!", "We are halu!", "We are humorous!", "We are happening!"];
 var phrase_num = 0;
+
 function first_dropdown (){
     // makes the first dropdown box
     for(var i = 0; i < options.length; i++) {
@@ -60,7 +61,7 @@ function radio_check() {
 
     $('input[type="radio"]').click(function() {
         // this unchecks all the checkboxes
-        var get= document.getElementsByName('day');
+        var get= document.getElementsByName("day");
         for(var i= 0; i<get.length; i++){
         get[i].checked= false;}
         
