@@ -1,5 +1,3 @@
-
-/* organize the styles */
 * {
     color: black
 }
@@ -9,12 +7,15 @@ body {
 header {
     background-color: rgb(245, 165, 97);
 }
-footer {
-    background-color: rgb(231, 224, 234);
-}  
-.bg-img{
+.center {
+    text-align: center;
+}
+.bg-img {
     background-image: url("https://t3.ftcdn.net/jpg/03/66/10/14/360_F_366101427_8yazUJK82fDrLi4YtpnQO3DJ4dTygxoe.jpg");
     background-size: cover;
+}
+.rm-bg {
+    background:none;
 }
 textarea {
     background: none;
@@ -23,9 +24,9 @@ textarea::placeholder {
     color: black;
     opacity: 1;
 }
-.rm-bg {
-    background:none;
+.ft {
+    display:none
 }
-.center {
-    text-align: center;
-}
+footer {
+    background-color: rgb(231, 224, 234);
+}  

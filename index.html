@@ -17,15 +17,15 @@
   </div>
 </header>
 <br>
-<form>
+<form action="javascript:;" onsubmit="give_certificate()">
 <!-- text input things -->
 <div class="row container-fluid justify-content-md-center">
   <!-- the username stuff -->
   <div class="col-4 bg-img">
     <label for="fname">First name:</label><br>
-  <input class="rm-bg" type="text" id="fname" name="fname"><br>
+  <input class="rm-bg" type="text" id="fname" name="fname" required><br>
   <label for="lname">Last name:</label><br>
-  <input class="rm-bg" type="text" id="lname" name="lname"><br>
+  <input class="rm-bg" type="text" id="lname" name="lname" required><br>
   <br>
   </div>
 
@@ -34,52 +34,59 @@
   <!-- email and password inputs -->
   <div class="col-4 bg-img">
     <label for="userEmail">Enter email:</label><br>
-    <input class="rm-bg" type="email" id="userEmail" name="userEmail"><br>
+    <input class="rm-bg" type="email" id="userEmail" name="userEmail" required><br>
     <label for="userPsw">Enter password:</label><br>
-    <input class="rm-bg" type="password" id="userPsw" name="userPsw"><br>
+    <input class="rm-bg" type="password" id="userPsw" name="userPsw" required><br>
   </div>
 
 </div>
 <br>
 
-<!-- dropdown/radio/checkbox | also has the input into other stuff (not in yet) -->
+<!-- dropdown/radio/checkbox -->
 <div class="row container-fluid justify-content-md-center">
   <!-- choosing phrase -->
   <div class="col-4 bg-img">
-  <label for="phrase">Choose a main phrase group:</label><br>
-  <select class="rm-bg" id="phrase" name="phrase">
+  <label for="first_dropdown">Choose a main phrase group:</label><br>
+  <select class="rm-bg" id="first_dropdown" name="first_dropdown">
     <br>
-    <option>Choose</option>
   </select><br>
   <br>
   <!-- under the previous dropdown, second dropdown will appear to make user choose anothe phrase. Will not have the one already selected -->
+  <div id="sec_dropdown" class="collapse">
+    <label for="second_dropdown">Choose a alternative phrase group:</label><br>
+    <select class="rm-bg" id="second_dropdown" name="second_dropdown">
+      <br>
+    </select>
   </div>
+</div>
 
   <div class="col-2"></div>
 
-  <!-- part time or full -->
+  <!-- part time or full time -->
   <div class="col-4 bg-img">
-    <input type="radio" id="fullTime" name="time" value="fullTime">
+    <h6>What type of member will you be?</h6>
+    <input type="radio" id="fullTime" name="time" value="ft">
     <label for="fullTime">Full time</label><br>
-    <input type="radio" id="partTime" name="time" value="partTime">
+    <input type="radio" id="partTime" name="time" value="pt">
     <label for="partTime">Part time</label><br>
     <br>
-    <!-- certain days will appear depending on which radio btn was selected. functionality has not ben added yet. -->
-    <p>Choose cult activity days.</p>
-    <input type="checkbox" id="sunday" name="sunday" value="sunday">
-    <label for="sunday"> Sunday</label><br>
-    <input type="checkbox" id="monday" name="monday" value="monday">
-    <label for="monday"> Monday</label><br>
-    <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
-    <label for="tuesday"> Tuesday</label><br>
-    <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
-    <label for="wednesday"> Wednesday</label><br>
-    <input type="checkbox" id="thursday" name="thursday" value="thursday">
-    <label for="thursday"> Thursday</label><br>
-    <input type="checkbox" id="friday" name="friday" value="friday">
-    <label for="friday"> Friday</label><br>
-    <input type="checkbox" id="saturday" name="saturday" value="saturday">
-    <label for="saturday"> Saturday</label><br>
+    <!-- certain days will appear depending on which radio btn was selected and checkboxes will be cleared upon clicking a radio btn -->
+    <p class="ft pt">Choose cult activity days.</p>
+    
+    <input type="checkbox" class="ft pt" id="monday" name="day" value="monday">
+    <label for="monday" class="ft pt"> Monday</label><br>
+    <input type="checkbox" class="ft " id="tuesday" name="day" value="tuesday">
+    <label for="tuesday" class="ft "> Tuesday</label><br>
+    <input type="checkbox" class="ft pt" id="wednesday" name="day" value="wednesday">
+    <label for="wednesday" class="ft pt"> Wednesday</label><br>
+    <input type="checkbox" class="ft pt" id="thursday" name="day" value="thursday">
+    <label for="thursday" class="ft pt"> Thursday</label><br>
+    <input type="checkbox" class="ft pt" id="friday" name="day" value="friday">
+    <label for="friday" class="ft pt"> Friday</label><br>
+    <input type="checkbox" class="ft" id="saturday" name="day" value="saturday">
+    <label for="saturday" class="ft"> Saturday</label><br>
+    <input type="checkbox" class="ft" id="sunday" name="day" value="sunday">
+    <label for="sunday" class="ft"> Sunday</label><br>
   </div>
 </div>
 <br>
@@ -98,12 +105,19 @@
 <div class="row container-fluid justify-content-md-center">
   <div class="col center">
     <input type="submit" value="Submit">
-    <input type="button" onclick="nothing-right-now" value="see example form">
+    <input type="button" id="wah" onclick="example_form" value="see example form">
+  </div>
+</div>
+<br>
+</form>
+
+<!-- input display is put here -->
+<div class="row container-fluid justify-content-md-center">
+  <div id="certificate" class="col-3 center bg-img">
   </div>
 </div>
 <br>
 
-</form>
 <!-- repo/validator/playlist links -->
 <footer>
   <div class="row container-fluid justify-content-md-center">
@@ -117,12 +131,15 @@
     </div>
     <!-- playlist -->
     <div class="col-sm-2 center">
-      <a href="#" target="_blank">playlist (currently not up yet)</a>
+      <a href="#" target="_blank">playlist</a> 
+      <!-- the playlist turned out to be -->
     </div>
   </div>
 </footer>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script><script  src="scripts/script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+<script  src="scripts/script.js"></script>
+<script src="scripts/data.js"></script>
 
 </body>
 </html>
